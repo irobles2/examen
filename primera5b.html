@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Primera 5B</title>
+	<style type="text/css">
+		body{margin:0px;font-family: arial;}
+		.menu{width:1022px;padding:10px 0px;border:1px solid white;margin:0px auto;text-align: left;}
+		#opc1{padding:10px;background-color: #F5A9E1;cursor:pointer;}
+		#opc2{padding:10px;background-color: #FA8258;cursor:pointer;}
+		#opc3{padding:10px;background-color: #E6E6E6;cursor:pointer;}
+		#contenido{width: 1024px;margin: 0px auto;}
+		h3 span{font-size: 10px; color: #b3b3b3;}
+		.news{width: 40px;float: left;}
+		.titIcono{margin-left:45px;width: 150px;}
+		#sugiere{font-size: 8pt;color: gray;font-style: italic;}
+		#relleno {margin-bottom: 10px;}
+	</style>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body id="cuerpo">
+	<div id="arriba" class="hero is-primary">
+		<div class="banner">
+			<img src="images/banner5b.jpg">
+			<div class="menu"><span id="opc1" onclick="color1();">Elementos HTML</span>&nbsp;<span id="opc2" onclick="color2();">Procesos</span>&nbsp;<span id="opc3" onclick="color3();">Relleno</span></div>
+		</div>
+	</div>
+	<div id="contenido">
+		<div id="ordenadas">
+			<h2>Sección de elementos HTML</h3>
+			<h3 class="mostar" onclick="mostrarlista();" onmouseenter="this.style.cursor='pointer';">Listas ordenadas <span>(Click para generar lista)</span></h3>
+			<div id="lista">
+				<ol>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+					<li><p>Elemento de lista</p></li>
+				</ol>
+			</div>
+		</div>
+		<div id="procesos">
+			<h2>Sección de procesos</h2>
+			<p>Producto:<input type="text" id="producto" size="20">&nbsp;Precio:<input type="text" id="precio" size="10">&nbsp;Cantidad:<input type="text" id="cantidad" size="10"></p>
+			<button onclick="compras();">Agregar compra</button>
+			
+			<div>
+				<table id="salida" border="1" width="50%">
+					<td>Producto</td>
+					<td>Precio</td>
+					<td>Cantidad</td>
+					<td>Importe</td>
+
+				</table>
+			</div>
+		</div>
+		<div id="relleno">	
+			<h2>Sección relleno</h2>
+			<div>
+				<img class="news" src="images/iconoNews.png"><div class="titIcono"><p>Conteos y algo mas<br><span id="sugiere">Levantamiento de información</span></p></div> 
+				<br />
+				<img onclick="likes();" src="images/like.jpg" width="200" onmouseenter="this.style.cursor='pointer';">
+				<h3 id="info" >0 Me gusta</h3>
+			</div>
+		</div>
+	</div>
+	<div id="pie" class="footer content has-text-centered">
+		<p>&copy; Desarrollado por:<a href="#">Ivan Fernando Robles Adalid</a></p>
+	</div>
+	<script src="/funcion.js"></script>
+</body>
+</html>
